@@ -1,0 +1,85 @@
+.header {
+    height: 70px;
+    line-height: 70px;
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            h1 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--primary-color);
+            }
+        }
+        .navigation {
+            .menu {
+                display: flex;
+                align-items: center;
+                gap: 2.7rem;
+                .nav-item {
+                    a {
+                        color: var(--primary-color);
+                        font-weight: 500;
+                        cursor: pointer;
+                        &.nav-active {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-icon {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            span {
+                i {
+                    font-size: 1.4rem;
+                    color: var(--primary-color);
+                    cursor: pointer;
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                }
+            }
+            .fav-icon,
+            .cart-icon {
+                position: relative;
+                .badge {
+                    position: absolute;
+                    top: 28%;
+                    right: -10px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: var(--primary-color);
+                    color: #fff;
+                    border-radius: 50px;
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    z-index: 10;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .mobile-menu {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            display: none;
+            @media screen and (max-width: 991px) {
+                display: block;
+            }
+        }
+    }
+}
